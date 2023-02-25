@@ -1,0 +1,46 @@
+# API information
+title: 'FastAPI'
+description: >
+  ChimichangApp API helps you do awesome stuff. 🚀
+
+  ## Items
+
+  You can **read items**.
+
+version: '0.1.0'
+
+# Declare all tags
+tags:
+  users:
+    description: "Operations with users. The **login** logic is also here."
+  items:
+    description: "Manage items. So _fancy_ they have their own docs."
+
+routes:
+  # A route is the “name” you use to access endpoints, used in the URL:
+  # www.some_api.com/my_model/
+  classification_model:
+    # Catalog reference to .pickle model
+    predictor: titanic_classifier
+    # allowed types int, float, str, bool and enum
+    # parameters are used to create a single row pandas df
+    # make sure to declare in the same order as your model needs.
+
+    # Declare route tags
+    tags: ['users']
+
+    parameters:
+      Pclass:
+        type: int
+      Sex:
+        type: int
+      SibSp:
+        type: int
+      Parch:
+        type: int
+      Embarked:
+        type: int
+      age_category:
+        type: int
+      fare_category:
+        type: int

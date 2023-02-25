@@ -1,0 +1,15 @@
+target: Survived
+features: [
+    "Pclass",
+    "Sex",
+    "Age",
+    "SibSp",
+    "Parch",
+    "Fare",
+    "Embarked"    
+]
+categorical_variables: [
+    "Sex", 
+    "Embarked"
+]
+
