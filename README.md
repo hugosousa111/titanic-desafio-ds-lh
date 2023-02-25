@@ -12,6 +12,7 @@
 
 * Virtual env
     `python -m venv venv`
+    `source venv/bin/activate`
 
 * Install packages:
     `pip install -r src/requirements.txt`
